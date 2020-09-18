@@ -4,9 +4,93 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="heading-section">
+    <h1 class="main-heading">The Code Review</h1>
+  </header>
   
-  
+  <main>
+    <section class="subheading-section">
+      <div>
+        <h2>Sign up for our newsletter</h2>
+        <p>Get the latest news on how your code is doing right in yor inbox</p>
+      </div>
+    </section>
+
+    <section>
+      <form action="index.html" method="post">
+        <fieldset class="contact-info">
+
+            <legend>Contact Information</legend>
+              <label for="fullname">Full Name</label>
+              <input type="text" id="-fullname" name="user_full_name" placeholder="Required" required>
+             
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="user_email" placeholder="Required" required>
+               
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="user_phone_number">
+               
+              <label for="street-address">Street Address</label>
+              <input type="text" id="street-address" name="user_street_address">
+          
+              <label for="city">City</label>
+              <input type="text" id="city" name="user_city">
+        
+              <label for="state">State</label>
+              <select id="state" name="user_state" required>
+                  <option value="" disabled selected>Select Current State</option>
+                  <option value="denial">Denial</option>
+                  <option value="shock">Shock</option>
+                  <option value="hover">...Hover</option>
+                  <option value="texas">Texas</option>
+              </select>
+                
+              <label for="zip-code">Zip Code</label>
+              <input type="text" id="zip-code" name="user_zip_code">
+
+        </fieldset>
+
+
+        <fieldset class="newsletter">
+
+            <legend>Newsletter</legend>
+                <label class="description">Select the newsletters you would like to receive</label><br>
+                    <input type="checkbox" id="html-news" value="html_interest" name="user_newsletter">
+                    <label for="html-news">HTML News</label><br>
+
+                    <input type="checkbox" id="css-news" value="css_interest" name="user_newsletter">
+                    <label for="css-news">CSS News</label><br>
+
+                    <input type="checkbox" id="javascript-news" value="javascript_interest" name="user_newsletter">
+                    <label for="javascript-news">JavaScript News</label><br>
+
+                <label class="description">Newsletter format</label>
+                    <input type="radio" id="format_html" value="html_format" name="user_format">
+                    <label for="format_html" class="radio">HTML</label><br>
+
+                    <input type="radio" id="format_plain" value="plain_format" name="user_format">
+                    <label for="format_plain">Plain text</label>
+                  
+
+                    <div class="newsletter">
+                        <label for="topics" class="form-description">Other topics you'd like to hear about</label>
+                        <textarea id="topics" name="user_topics"></textarea>
+                    </div>
+        </fieldset>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+    </section>
+
+</main>
+
+<footer>
+  <p>Copyright 2020 The Code Review</p>
+</footer>
+
 </body>
 </html>
