@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="heading-section">
@@ -24,61 +26,77 @@
         <fieldset class="contact-info">
 
             <legend>Contact Information</legend>
-              <label for="fullname">Full Name</label>
-              <input type="text" id="-fullname" name="user_full_name" placeholder="Required" required>
+              <div class="flex">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="user_full_name" placeholder="Required" required>
+              </div>
              
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="user_email" placeholder="Required" required>
+              <div class="flex">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="user_email" placeholder="Required" required>
+              </div>
                
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="user_phone_number">
+              <div class="flex">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="user_phone_number">
+              </div>
                
-              <label for="street-address">Street Address</label>
-              <input type="text" id="street-address" name="user_street_address">
+              <div class="flex">
+                <label for="street-address">Street Address</label>
+                <input type="text" id="street-address" name="user_street_address">
+              </div>
           
-              <label for="city">City</label>
-              <input type="text" id="city" name="user_city">
+              <div class="flex">
+                <label for="city">City</label>
+                <input type="text" id="city" name="user_city">
+              </div>
         
-              <label for="state">State</label>
-              <select id="state" name="user_state" required>
-                  <option value="" disabled selected>Select Current State</option>
-                  <option value="denial">Denial</option>
-                  <option value="shock">Shock</option>
-                  <option value="hover">...Hover</option>
-                  <option value="texas">Texas</option>
-              </select>
+              <div class="flex">
+                <label for="state">State</label>
+                <select id="state" name="user_state" required>
+                    <option value="" disabled selected>Select Current State</option>
+                    <option value="denial">Denial</option>
+                    <option value="shock">Shock</option>
+                    <option value="hover">...Hover</option>
+                    <option value="texas">Texas</option>
+                </select>
+              </div>
                 
-              <label for="zip-code">Zip Code</label>
-              <input type="text" id="zip-code" name="user_zip_code">
+              <div class="flex">
+                <label for="zip-code">Zip Code</label>
+                <input type="text" id="zip-code" name="user_zip_code">
+              </div>
 
         </fieldset>
 
 
         <fieldset class="newsletter">
-
             <legend>Newsletter</legend>
-                <label class="description">Select the newsletters you would like to receive</label><br>
-                    <input type="checkbox" id="html-news" value="html_interest" name="user_newsletter">
-                    <label for="html-news">HTML News</label><br>
+               <label class="description">Select the newsletters you would like to receive</label>
+               <div>
+                  <input type="checkbox" id="html-news" value="receive_html" name="user_newsletter">
+                  <label for="html-news" class="radio">HTML News</label><br>
 
-                    <input type="checkbox" id="css-news" value="css_interest" name="user_newsletter">
-                    <label for="css-news">CSS News</label><br>
+                  <input type="checkbox" id="css-news" value="css_newsletter" name="user_newsletter">
+                  <label for="css-news" class="radio">CSS News</label><br>
 
-                    <input type="checkbox" id="javascript-news" value="javascript_interest" name="user_newsletter">
-                    <label for="javascript-news">JavaScript News</label><br>
+                  <input type="checkbox" id="javascript-news" value="javascript_newsletter" name="user_newsletter">
+                  <label for="javascript-news" class="radio">JavaScript News</label><br>
+               </div>
 
-                <label class="description">Newsletter format</label>
-                    <input type="radio" id="format_html" value="html_format" name="user_format">
-                    <label for="format_html" class="radio">HTML</label><br>
+               <div class="newsletter-format">
+                  <label class="description">Newsletter format</label>
+                  <input type="radio" id="format_html" value="html_format" name="user_format">
+                  <label for="format_html" class="radio">HTML</label><br>
 
-                    <input type="radio" id="format_plain" value="plain_format" name="user_format">
-                    <label for="format_plain">Plain text</label>
-                  
-
-                    <div class="newsletter">
-                        <label for="topics" class="form-description">Other topics you'd like to hear about</label>
-                        <textarea id="topics" name="user_topics"></textarea>
-                    </div>
+                  <input type="radio" id="format_plain" value="plain_format" name="user_format">
+                  <label for="format_plain">Plain text</label><br>
+               </div>
+            
+               <div class="texarea">
+                  <label for="other-topics" class="description">Other topics you'd like to hear about:</label>
+                  <textarea id="other-topics" name="user_topics" placeholder="Or just say hi"></textarea>
+               </div>
         </fieldset>
 
         <button type="submit">Sign Up</button>
